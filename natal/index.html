@@ -58,8 +58,11 @@ main, header, footer { position: relative; z-index: 2; }
 @keyframes entra { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 .fone { position: relative; width: min(300px, 76vw); aspect-ratio: 9 / 16; margin: 0 auto; border: 5px solid #000; border-radius: 34px; overflow: hidden; background: #000; box-shadow: 10px 12px 0 #000, 0 0 80px rgba(233,190,76,.25); transform: rotate(2deg); animation: entra .8s var(--mola) .3s both; }
 .fone video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.som { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); border: 3px solid #000; background: var(--ouro); color: var(--tinta); font: 900 15px 'Nunito', sans-serif; padding: 8px 14px; border-radius: 12px; box-shadow: 4px 4px 0 #000; cursor: pointer; white-space: nowrap; }
-.som.some { display: none; }
+.play { position: absolute; inset: 0; border: 0; background: rgba(0,0,0,.28); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; cursor: pointer; color: #fff; font: inherit; }
+.play .tri { width: 92px; height: 92px; border-radius: 50%; background: var(--ouro); color: var(--tinta); border: 4px solid #000; box-shadow: 6px 6px 0 #000; display: grid; place-items: center; font-size: 38px; padding-left: 7px; animation: pulsa 1.6s ease-in-out infinite; }
+@keyframes pulsa { 50% { transform: scale(1.08); } }
+.play b { background: rgba(0,0,0,.75); padding: 6px 12px; border-radius: 10px; font-size: 15px; }
+.play.some { display: none; }
 @media (max-width: 760px) { .heroi { grid-template-columns: 1fr; padding-top: 22px; padding-bottom: 10px; } .fone { width: min(260px, 70vw); } }
 
 section { padding: 34px 0; }
@@ -73,7 +76,7 @@ section { padding: 34px 0; }
 .dor .riscado { text-decoration: line-through; text-decoration-color: var(--verm); text-decoration-thickness: 3px; }
 
 .galeria { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.galeria img { width: 100%; border: 3px solid #000; border-radius: 18px; box-shadow: var(--sombra); display: block; background: #222; }
+.galeria img { width: 100%; height: auto; border: 3px solid #000; border-radius: 18px; box-shadow: var(--sombra); display: block; background: #222; }
 .galeria figure { margin: 0; } .galeria figcaption { font-size: 14px; color: var(--txt2); margin-top: 8px; }
 @media (max-width: 760px) { .galeria { grid-template-columns: 1fr 1fr; } .galeria figure:first-child { grid-column: 1 / -1; } }
 .honesto { color: var(--txt2); font-size: 14px; margin-top: 12px; }
@@ -149,7 +152,7 @@ section { padding: 34px 0; }
       <div class="dias" id="dias"></div>
     </div>
     <div>
-      <div class="fone"><video id="vid" src="natal-v1.mp4" poster="img/poster.jpg" autoplay muted loop playsinline preload="metadata"></video><button class="som" id="som">🔊 Ouvir o Papai Noel</button></div>
+      <div class="fone"><video id="vid" src="natal-v1.mp4" poster="img/poster.jpg" playsinline preload="metadata"></video><button class="play" id="play" aria-label="Assistir o vídeo com som"><span class="tri">▶</span><b>Assistir com som</b></button></div>
     </div>
   </div>
 
@@ -464,8 +467,8 @@ section { padding: 34px 0; }
   document.querySelectorAll('[data-plano]').forEach(a => { const u = CHECKOUT[a.dataset.plano]; if (u) a.href = u; });
   const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('on'); io.unobserve(x.target); } }), { rootMargin: '0px 0px -8% 0px' }) : null;
   document.querySelectorAll('.aparece').forEach(e => io ? io.observe(e) : e.classList.add('on'));
-  const v = document.getElementById('vid'), s = document.getElementById('som');
-  s.addEventListener('click', () => { v.muted = false; v.currentTime = 0; v.play(); s.classList.add('some'); });
+  const v = document.getElementById('vid'), pl = document.getElementById('play');
+  pl.addEventListener('click', () => { v.muted = false; v.controls = true; pl.classList.add('some'); v.play(); });
   const hoje = new Date(), natal = new Date(hoje.getFullYear(), 11, 25), d = Math.ceil((natal - hoje) / 864e5);
   const el = document.getElementById('dias');
   if (d > 1) el.innerHTML = '🎅 Faltam <b>' + d + ' dias</b> pro Natal'; else el.remove();
