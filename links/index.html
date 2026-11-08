@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zé · links</title>
+<meta name="description" content="Os cursos e packs do Zé: vídeos animados com IA e negócios sem loja.">
+<meta property="og:title" content="Zé · os links">
+<meta property="og:image" content="https://deivysonads.github.io/pack-do-ze/videos/capa.jpg">
+<meta name="theme-color" content="#15151B">
+<style>
+@font-face { font-family: 'Inter'; src: url(../fonts/inter-latin.woff2) format('woff2'); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url(../fonts/inter-latin-ext.woff2) format('woff2'); font-weight: 100 900; font-display: swap; unicode-range: U+0100-02BA, U+1E00-1EFF; }
+@font-face { font-family: 'Patrick'; src: url(../fonts/patrick-latin.woff2) format('woff2'); font-display: swap; }
+:root { --bg:#15151B; --tinta:#1B1B22; --papel:#F6F0E1; --amarelo:#FFD23F; --azul:#3257F5; --verde:#2FB36D; --txt:#F3EFE6; --txt2:#B9B4A8; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; font-family: 'Inter', system-ui, sans-serif; color: var(--txt); background-color: var(--bg);
+  background-image: radial-gradient(ellipse 80% 45% at 50% 0%, rgba(255,210,63,.16), transparent 70%), linear-gradient(#111116 3px, transparent 3px), linear-gradient(90deg, #111116 3px, transparent 3px);
+  background-size: 100% 900px, 100% 52px, 104px 104px; }
+.wrap { max-width: 480px; margin: 0 auto; padding: 34px 16px 40px; text-align: center; }
+.avatar { width: 108px; height: 108px; margin: 0 auto; border-radius: 50%; background: #F6C9A0; border: 4px solid #000; box-shadow: 5px 5px 0 #000; position: relative; overflow: hidden; }
+.avatar::before { content: ''; position: absolute; left: 8px; right: 8px; top: 14px; height: 40px; background: var(--azul); border: 4px solid #000; border-radius: 50px 50px 6px 6px; }
+.avatar i { position: absolute; top: 58px; width: 22px; height: 22px; background: #fff; border: 3px solid #000; border-radius: 50%; }
+.avatar i::after { content: ''; position: absolute; left: 6px; top: 6px; width: 7px; height: 7px; background: #000; border-radius: 50%; }
+.avatar .e { left: 26px; } .avatar .d { left: 54px; }
+h1 { font-family: 'Patrick', cursive; font-weight: 400; font-size: 40px; margin: 16px 0 2px; }
+.sub { color: var(--txt2); margin: 0 0 26px; }
+.link { display: flex; align-items: center; gap: 14px; text-align: left; text-decoration: none; color: var(--tinta); background: var(--papel); border: 3px solid #000; border-radius: 20px; box-shadow: 6px 6px 0 #000; padding: 12px 14px; margin: 0 0 18px; transition: transform .15s, box-shadow .15s; animation: entra .5s cubic-bezier(.22,1,.36,1) both; }
+.link:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 #000; }
+.link:active { transform: translate(3px,3px); box-shadow: 2px 2px 0 #000; }
+.link img, .link .ico { width: 64px; height: 64px; border-radius: 14px; border: 3px solid #000; object-fit: cover; flex: none; display: flex; align-items: center; justify-content: center; font-size: 34px; }
+.link b { display: block; font-size: 18px; line-height: 1.2; }
+.link span { font-size: 14px; color: #5d5a52; }
+.link .seta { margin-left: auto; font-weight: 900; font-size: 22px; }
+.link.destaque { background: var(--amarelo); }
+.link.destaque span { color: #3b3a36; }
+.novo { display: inline-block; background: #E5484D; color: #fff; font-size: 11px; font-weight: 900; padding: 2px 8px; border-radius: 8px; margin-left: 6px; vertical-align: 2px; }
+@keyframes entra { from { opacity: 0; transform: translateY(16px); } }
+.link:nth-of-type(2) { animation-delay: .08s; } .link:nth-of-type(3) { animation-delay: .16s; }
+footer { color: var(--txt2); font-size: 12px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="avatar"><i class="e"></i><i class="d"></i></div>
+  <h1>O Zé</h1>
+  <p class="sub">Negócio, dinheiro e vídeo com IA, sem enrolação.</p>
+
+  <a class="link destaque" href="../videos/">
+    <img src="../videos/img/capas/nosso-frota.jpg" alt="">
+    <div><b>Aprenda a fazer vídeos animados com IA <em class="novo">NOVO</em></b><span>O estúdio que fez o vídeo de 800 mil views · R$ 19</span></div>
+    <div class="seta">→</div>
+  </a>
+  <a class="link" href="../">
+    <div class="ico" style="background:#C7F0D8">🧽</div>
+    <div><b>Pack do Zé: 20 negócios sem loja</b><span>O que comprar, quanto cobrar e a conta do mês · R$ 10</span></div>
+    <div class="seta">→</div>
+  </a>
+  <a class="link" href="../ia/">
+    <div class="ico" style="background:#BFE4FF">🤖</div>
+    <div><b>20 negócios com IA</b><span>Negócios pra começar usando inteligência artificial · R$ 10</span></div>
+    <div class="seta">→</div>
+  </a>
+  <footer>Estúdio do Zé</footer>
+</div>
+</body>
+</html>

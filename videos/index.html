@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vídeos Animados com IA · Estúdio do Zé</title>
+<meta name="description" content="Tu fala a ideia, a IA escreve, narra, anima, legenda e coloca o som. O estúdio pronto que fez um vídeo de 800 mil views, por R$ 19.">
+<meta property="og:title" content="Vídeos Animados com IA · o estúdio pronto por R$ 19">
+<meta property="og:description" content="O mesmo estúdio que fez um vídeo de 800 mil views. Roteiro, voz, animação, legenda e som com IA.">
+<meta property="og:image" content="https://deivysonads.github.io/pack-do-ze/videos/capa.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#15151B">
+<style>
+@font-face { font-family: 'Inter'; src: url(../fonts/inter-latin.woff2) format('woff2'); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url(../fonts/inter-latin-ext.woff2) format('woff2'); font-weight: 100 900; font-display: swap; unicode-range: U+0100-02BA, U+1E00-1EFF; }
+@font-face { font-family: 'Patrick'; src: url(../fonts/patrick-latin.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: 'Patrick'; src: url(../fonts/patrick-latin-ext.woff2) format('woff2'); font-display: swap; unicode-range: U+0100-02BA, U+1E00-1EFF; }
+:root { --bg:#15151B; --rejunte:#111116; --tinta:#1B1B22; --papel:#F6F0E1; --amarelo:#FFD23F; --azul:#3257F5; --verde:#2FB36D; --vermelho:#E5484D; --txt:#F3EFE6; --txt2:#B9B4A8; --sombra:5px 5px 0 #000; --mola:cubic-bezier(.34,1.56,.64,1); --suave:cubic-bezier(.22,1,.36,1); }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; font-family: 'Inter', system-ui, sans-serif; color: var(--txt); line-height: 1.55; font-size: 17px; overflow-x: hidden; padding-bottom: 84px;
+  background-color: var(--bg);
+  background-image: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(255,210,63,.12), transparent 70%), linear-gradient(var(--rejunte) 3px, transparent 3px), linear-gradient(90deg, var(--rejunte) 3px, transparent 3px);
+  background-size: 100% 1000px, 100% 52px, 104px 104px; }
+a { color: inherit; }
+.mao { font-family: 'Patrick', cursive; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+.topo { position: sticky; top: 0; z-index: 30; background: rgba(21,21,27,.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,.06); }
+.topo .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 60px; }
+.marca { font-family: 'Patrick', cursive; font-size: 22px; display: flex; align-items: center; gap: 8px; text-decoration: none; white-space: nowrap; }
+.bone { width: 22px; height: 14px; background: var(--azul); border: 3px solid var(--tinta); border-radius: 14px 14px 3px 3px; box-shadow: 6px 2px 0 -2px var(--azul); }
+.etiqueta { display: inline-block; background: var(--amarelo); color: var(--tinta); border: 3px solid var(--tinta); box-shadow: var(--sombra); font-family: 'Patrick', cursive; text-transform: uppercase; padding: 5px 16px 2px; border-radius: 10px; font-size: 18px; }
+.etiqueta.branca { background: #fff; text-transform: none; }
+.etiqueta.vermelha { background: var(--vermelho); color: #fff; }
+.botao { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 3px solid var(--tinta); background: var(--amarelo); color: var(--tinta); font-weight: 900; font-size: 19px;
+  padding: 16px 26px; border-radius: 16px; box-shadow: 6px 6px 0 #000; text-decoration: none; position: relative; overflow: hidden; transition: transform .15s var(--suave), box-shadow .15s var(--suave); white-space: nowrap; }
+.botao::after { content: ''; position: absolute; top: -20%; left: -60%; width: 40%; height: 140%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.75), transparent); transform: skewX(-20deg); animation: brilho 3.2s ease-in-out infinite; }
+@keyframes brilho { 0%, 70% { left: -60%; } 100% { left: 130%; } }
+.botao:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 #000; }
+.botao:active { transform: translate(3px,3px); box-shadow: 2px 2px 0 #000; }
+.botao.mini { font-size: 15px; padding: 9px 14px; border-radius: 12px; box-shadow: 4px 4px 0 #000; }
+.botao.grande { font-size: 21px; padding: 18px 30px; width: 100%; max-width: 520px; }
+.micro { font-size: 14px; color: var(--txt2); margin-top: 12px; }
+section { padding: 34px 0; }
+.titulo { font-family: 'Patrick', cursive; font-weight: 400; font-size: clamp(30px, 5.6vw, 46px); line-height: 1.08; margin: 0 0 16px; }
+.titulo em { font-style: normal; color: var(--amarelo); }
+.centro { text-align: center; }
+
+/* herói */
+.heroi { padding: 30px 0 10px; text-align: center; }
+.heroi h1 { font-family: 'Patrick', cursive; font-weight: 400; margin: 16px auto 0; font-size: clamp(40px, 8.4vw, 74px); line-height: 1.02; max-width: 900px; animation: carimbo .7s var(--mola) .1s both; }
+.heroi h1 em { font-style: normal; color: var(--amarelo); }
+.heroi .lead { font-size: clamp(17px, 2.6vw, 21px); color: var(--txt); max-width: 680px; margin: 16px auto 22px; animation: entra .6s var(--suave) .3s both; }
+@keyframes carimbo { from { opacity: 0; transform: scale(1.3) rotate(-4deg); } to { opacity: 1; } }
+@keyframes entra { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+/* VSL */
+.vsl { position: relative; max-width: 900px; margin: 0 auto; border: 4px solid #000; border-radius: 22px; overflow: hidden; box-shadow: 10px 10px 0 #000; background: #000; aspect-ratio: 16/9; }
+.vsl video { width: 100%; height: 100%; display: block; }
+.vsl .play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.25); border: 0; cursor: pointer; }
+.vsl .play span { width: 96px; height: 96px; border-radius: 50%; background: var(--amarelo); border: 4px solid #000; box-shadow: 6px 6px 0 #000; display: flex; align-items: center; justify-content: center; animation: pulsa 1.6s ease-in-out infinite; }
+.vsl .play span::before { content: ''; border-left: 30px solid var(--tinta); border-top: 19px solid transparent; border-bottom: 19px solid transparent; margin-left: 8px; }
+.vsl .play b { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); background: #fff; color: var(--tinta); font-family: 'Patrick', cursive; font-weight: 400; font-size: 20px; padding: 4px 16px; border-radius: 12px; border: 3px solid #000; white-space: nowrap; }
+@keyframes pulsa { 50% { transform: scale(1.08); } }
+.cta-vsl { margin-top: 24px; }
+
+/* fileiras de capinhas */
+.faixa { overflow: hidden; padding: 6px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.trilho { display: flex; gap: 14px; width: max-content; animation: corre 42s linear infinite; }
+.faixa.volta .trilho { animation-direction: reverse; animation-duration: 48s; }
+.trilho img { width: 150px; height: 237px; object-fit: cover; border-radius: 16px; border: 3px solid #000; box-shadow: 5px 5px 0 #000; flex: none; }
+@keyframes corre { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (min-width: 760px) { .trilho img { width: 190px; height: 300px; } }
+@media (prefers-reduced-motion: reduce) { .trilho { animation: none; } }
+.numeros { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 22px 0 0; }
+
+/* nosso vídeo */
+.nosso { display: grid; grid-template-columns: 300px 1fr; gap: 34px; align-items: center; }
+.fone { width: 270px; margin: 0 auto; border-radius: 40px; background: #0B0B0E; border: 4px solid #000; box-shadow: 10px 10px 0 #000; padding: 10px; transform: rotate(-3deg); }
+.fone video { width: 100%; border-radius: 30px; display: block; aspect-ratio: 9/16; object-fit: cover; background: #222; }
+.contador { display: inline-flex; align-items: center; gap: 10px; background: var(--tinta); border: 3px solid #000; box-shadow: var(--sombra); border-radius: 16px; padding: 8px 18px; font-weight: 900; font-size: 34px; color: #fff; }
+@media (max-width: 760px) { .nosso { grid-template-columns: 1fr; gap: 22px; text-align: center; } }
+
+/* cartões */
+.grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.cartao { background: var(--papel); color: var(--tinta); border: 3px solid var(--tinta); border-radius: 20px; box-shadow: 7px 7px 0 #000; padding: 20px 20px 18px; }
+.cartao h3 { margin: 6px 0 6px; font-size: 20px; }
+.cartao p { margin: 0; font-size: 16px; color: #3b3a36; }
+.cartao .ico { font-size: 34px; }
+.passo { display: grid; grid-template-columns: 54px 1fr; gap: 14px; align-items: start; margin: 0 0 16px; }
+.passo .n { width: 48px; height: 48px; border-radius: 50%; background: var(--amarelo); color: var(--tinta); border: 3px solid #000; box-shadow: 4px 4px 0 #000; font-weight: 900; font-size: 22px; display: flex; align-items: center; justify-content: center; }
+.passo h3 { margin: 4px 0 4px; font-size: 21px; }
+.passo p { margin: 0; color: var(--txt2); }
+.pedido { background: #FAF9F5; color: var(--tinta); border: 3px solid #000; border-radius: 18px; box-shadow: 6px 6px 0 #000; overflow: hidden; max-width: 640px; margin: 18px 0 0; }
+.pedido div:first-child { background: #D97757; color: #fff; font-weight: 800; padding: 8px 16px; font-size: 15px; }
+.pedido div:last-child { padding: 14px 16px; font-weight: 600; }
+.formatos img { width: 100%; aspect-ratio: 9/12; object-fit: cover; border-radius: 12px; border: 3px solid #000; margin-bottom: 8px; }
+.sincero { background: #2a2a33; border: 3px dashed var(--txt2); border-radius: 20px; padding: 20px 22px; }
+.sincero ul { margin: 8px 0 0; padding-left: 20px; }
+.sincero li { margin: 6px 0; }
+
+/* preço */
+.preco { background: var(--papel); color: var(--tinta); border: 4px solid #000; border-radius: 26px; box-shadow: 10px 10px 0 #000; padding: 28px 22px; max-width: 560px; margin: 0 auto; text-align: center; }
+.preco .valor { font-weight: 900; font-size: 84px; line-height: 1; margin: 6px 0; }
+.preco .valor small { font-size: 34px; vertical-align: 32px; margin-right: 4px; }
+.preco ul { text-align: left; margin: 16px auto 20px; padding-left: 0; list-style: none; max-width: 420px; }
+.preco li { padding: 6px 0 6px 32px; position: relative; font-weight: 600; }
+.preco li::before { content: '✓'; position: absolute; left: 0; top: 4px; width: 22px; height: 22px; border-radius: 50%; background: var(--verde); color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; font-weight: 900; }
+.preco .micro { color: #6b665b; }
+
+/* perguntas */
+details { background: #1f1f27; border: 2px solid #2f2f3a; border-radius: 16px; padding: 14px 18px; margin: 10px 0; }
+summary { cursor: pointer; font-weight: 800; font-size: 18px; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; float: right; color: var(--amarelo); font-size: 22px; line-height: 1; }
+details[open] summary::after { content: '−'; }
+details p { color: var(--txt2); margin: 10px 0 0; }
+
+/* barra fixa */
+.barra { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: rgba(21,21,27,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,.08); padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); }
+.barra .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.barra .t { font-size: 14px; color: var(--txt2); line-height: 1.25; }
+.barra .t b { color: var(--txt); font-size: 16px; display: block; }
+footer { text-align: center; color: var(--txt2); font-size: 13px; padding: 30px 16px 10px; }
+.aparece { opacity: 0; transform: translateY(24px); transition: opacity .6s var(--suave), transform .6s var(--suave); }
+.aparece.on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .aparece { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+
+<header class="topo"><div class="wrap">
+  <a class="marca" href="#"><span class="bone"></span>Estúdio do Zé</a>
+  <a class="botao mini" href="https://herogateway.com/c/BSZZPFE7?o=W5XR5VBD">Quero por R$ 19</a>
+</div></header>
+
+<main>
+<section class="heroi"><div class="wrap">
+  <span class="etiqueta">feito com IA, do roteiro ao som</span>
+  <h1>Faz vídeo animado que <em>viraliza</em> sem desenhar nada</h1>
+  <p class="lead">Tu fala a ideia. A inteligência artificial escreve o roteiro, faz a voz, anima, legenda e coloca o som. É o mesmo estúdio que fez o nosso vídeo de <b>800 mil views</b>.</p>
+  <div class="vsl" id="vsl">
+    <video id="vsl-video" src="vsl.mp4" poster="vsl-poster.jpg" playsinline preload="metadata"></video>
+    <button class="play" id="vsl-play" aria-label="Assistir o vídeo"><span></span><b>assiste com som 🔊</b></button>
+  </div>
+  <div class="cta-vsl">
+    <a class="botao grande" href="https://herogateway.com/c/BSZZPFE7?o=W5XR5VBD">Quero o estúdio por R$ 19 →</a>
+    <div class="micro">Pagamento único · acesso na hora no teu e-mail</div>
+  </div>
+</div></section>
+
+<section>
+  <div class="wrap centro"><h2 class="titulo">Vídeo animado dá <em>milhões</em> de views</h2>
+  <p style="color:var(--txt2);max-width:640px;margin:0 auto 18px">Esses são vídeos animados que estouraram nas redes. O povo assiste até o fim e manda pro amigo.</p></div>
+  <div class="faixa"><div class="trilho" id="linha1"></div></div>
+  <div class="faixa volta" style="margin-top:14px"><div class="trilho" id="linha2"></div></div>
+  <div class="wrap numeros">
+    <span class="etiqueta">17,3 mi</span><span class="etiqueta branca">16 mi</span><span class="etiqueta">10,6 mi</span><span class="etiqueta branca">6 mi</span><span class="etiqueta vermelha">e o nosso: 800 mil</span>
+  </div>
+</section>
+
+<section><div class="wrap nosso aparece">
+  <div class="fone"><video src="frota.mp4" autoplay muted loop playsinline poster="img/capas/nosso-frota.jpg"></video></div>
+  <div>
+    <span class="contador">👁 800 mil</span>
+    <h2 class="titulo" style="margin-top:18px">Esse aqui foi feito pelo <em>nosso estúdio</em></h2>
+    <p style="color:var(--txt2);font-size:18px;max-width:520px">"Lavar frota de madrugada": um negócio simples explicado pelo Zé, com a conta na tela. Roteiro, voz, desenho, legenda e som saíram da IA. A gente só deu a ideia.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="titulo aparece">Como <em>funciona</em></h2>
+  <div class="passo aparece"><div class="n">1</div><div><h3>Tu fala a ideia</h3><p>Abre o Claude e escreve o vídeo que tu quer, do teu jeito.</p></div></div>
+  <div class="passo aparece"><div class="n">2</div><div><h3>A IA faz o vídeo</h3><p>Escreve o roteiro, gera a voz, monta as cenas, coloca a legenda palavra por palavra e os efeitos de som.</p></div></div>
+  <div class="passo aparece"><div class="n">3</div><div><h3>Tu posta</h3><p>Sai o vídeo pronto pra Reels, TikTok e Shorts (ou deitado pro YouTube).</p></div></div>
+  <div class="pedido aparece"><div>✳ Claude</div><div>faz um vídeo do Zé explicando como lavar frota de madrugada</div></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="titulo aparece">O que tu <em>recebe</em></h2>
+  <div class="grade formatos aparece">
+    <div class="cartao"><img src="img/capas/nosso-frota.jpg" alt="formato esquete"><h3>🎭 Esquete</h3><p>Cenário desenhado, personagem falando e selos com os números. O formato do vídeo de 800 mil.</p></div>
+    <div class="cartao"><div class="ico">📓</div><h3>Caderno</h3><p>Desenho de caneta num caderno, ótimo pra explicar uma ideia ou uma conta.</p></div>
+    <div class="cartao"><div class="ico">🎓</div><h3>Aula 16:9</h3><p>Tela deitada pro YouTube, com passos numerados e personagem.</p></div>
+    <div class="cartao"><div class="ico">🎙️</div><h3>Narrado</h3><p>Texto grande e animado em cima da voz, bom pra anúncio do teu produto.</p></div>
+  </div>
+  <div class="grade aparece" style="margin-top:16px">
+    <div class="cartao"><div class="ico">📘</div><h3>Guia do zero ao post</h3><p>Instalação, a chave grátis da voz e o caminho até o primeiro vídeo postado.</p></div>
+    <div class="cartao"><div class="ico">📋</div><h3>Pedidos prontos</h3><p>É só copiar, colar no Claude e trocar o assunto.</p></div>
+    <div class="cartao"><div class="ico">🔊</div><h3>Efeitos sonoros próprios</h3><p>17 efeitos feitos do zero, sem direito autoral de ninguém.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="titulo aparece">E dá pra fazer <em>o quê</em> com isso?</h2>
+  <div class="grade aparece">
+    <div class="cartao"><div class="ico">📈</div><h3>Crescer o perfil</h3><p>Vídeo que ensina é compartilhado, e cada compartilhamento leva teu perfil pra gente nova.</p></div>
+    <div class="cartao"><div class="ico">💰</div><h3>Monetizar as views</h3><p>As plataformas pagam criadores que cumprem as regras de cada programa.</p></div>
+    <div class="cartao"><div class="ico">🛒</div><h3>Vender teu produto</h3><p>No fim do vídeo, chama pro link da bio. É o que a gente faz aqui todo dia.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sincero aparece">
+    <h2 class="titulo" style="font-size:34px;margin-bottom:6px">Sendo sincero, tu precisa de:</h2>
+    <ul>
+      <li>💻 <b>Um computador</b> (Mac, Windows ou Linux). No celular não roda.</li>
+      <li>✳ <b>Uma assinatura do Claude</b>, pra usar o Claude Code. É ele que faz o trabalho.</li>
+      <li>🔑 <b>Uma conta Google</b> pra chave grátis da voz (o guia mostra como pegar).</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="comprar"><div class="wrap">
+  <div class="preco aparece">
+    <span class="etiqueta">estúdio pronto</span>
+    <div class="valor"><small>R$</small>19</div>
+    <div style="font-weight:700;color:#6b665b">pagamento único</div>
+    <ul>
+      <li>Estúdio com 4 formatos e um exemplo de cada</li>
+      <li>Guia do zero ao vídeo postado</li>
+      <li>Pedidos prontos pra copiar e colar</li>
+      <li>17 efeitos sonoros próprios</li>
+      <li>Acesso na hora no teu e-mail</li>
+    </ul>
+    <a class="botao grande" href="https://herogateway.com/c/BSZZPFE7?o=W5XR5VBD">Quero o estúdio por R$ 19 →</a>
+    <div class="micro">Pagamento seguro pela Hero Gateway</div>
+  </div>
+</div></section>
+
+<section><div class="wrap" style="max-width:760px">
+  <h2 class="titulo">Perguntas</h2>
+  <details><summary>Preciso saber editar vídeo?</summary><p>Não. Tu escreve o que quer no Claude e ele monta o vídeo. Se quiser mudar algo, é só pedir em português.</p></details>
+  <details><summary>Funciona no celular?</summary><p>Não. O estúdio roda num computador (Mac, Windows ou Linux). O vídeo pronto tu manda pro celular e posta.</p></details>
+  <details><summary>Preciso pagar o Claude?</summary><p>Sim. O Claude Code precisa de uma assinatura do Claude. O estúdio e a voz não têm custo extra.</p></details>
+  <details><summary>A voz é paga?</summary><p>Não. Usa uma chave grátis do Google, com uma cota por dia. Também dá pra gravar a voz no celular.</p></details>
+  <details><summary>É garantido que o vídeo vai viralizar?</summary><p>Ninguém garante views. O estúdio faz o vídeo; o que aumenta a chance é postar todo dia e repetir o formato que funcionou.</p></details>
+  <details><summary>Como recebo?</summary><p>Logo depois do pagamento chega no teu e-mail o guia em PDF com o link pra baixar o estúdio.</p></details>
+</div></section>
+</main>
+
+<footer>Estúdio do Zé · vídeos feitos com IA · as capinhas são de vídeos animados públicos nas redes, mostradas só pelo número de views</footer>
+
+<div class="barra"><div class="wrap">
+  <div class="t"><b>Estúdio de Vídeos Animados</b>R$ 19 · pagamento único</div>
+  <a class="botao mini" href="https://herogateway.com/c/BSZZPFE7?o=W5XR5VBD">Quero agora</a>
+</div></div>
+
+<script>
+const capas = Array.from({ length: 15 }, (_, i) => 'img/capas/c' + String(i).padStart(2, '0') + '.jpg');
+const l1 = [...capas.slice(0, 8), 'img/capas/nosso-frota.jpg'];
+const l2 = [...capas.slice(8), 'img/capas/nosso-frota.jpg'];
+function enche(id, lista) {
+  const el = document.getElementById(id);
+  const dobro = [...lista, ...lista];
+  el.innerHTML = dobro.map(s => '<img src="' + s + '" alt="vídeo animado com milhões de views" loading="lazy">').join('');
+}
+enche('linha1', l1); enche('linha2', l2);
+const v = document.getElementById('vsl-video'), b = document.getElementById('vsl-play');
+b.addEventListener('click', () => { v.controls = true; v.play(); b.style.display = 'none'; });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .15 });
+document.querySelectorAll('.aparece').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
