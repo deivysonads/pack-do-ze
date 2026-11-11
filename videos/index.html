@@ -247,5 +247,18 @@ b.addEventListener('click', () => { v.controls = true; v.play(); b.style.display
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .15 });
 document.querySelectorAll('.aparece').forEach(el => io.observe(el));
 </script>
+<script>
+/* Leva as UTMs (e os códigos de clique dos anúncios) da página pro checkout. */
+(function () {
+  var chaves = /^(utm_[a-z_]+|src|sck|xcod|fbclid|gclid|ttclid|wbraid|gbraid|msclkid)$/i, guardado = {};
+  try { guardado = JSON.parse(sessionStorage.getItem('utms') || '{}'); } catch (e) {}
+  new URLSearchParams(location.search).forEach(function (v, k) { if (chaves.test(k) && v) guardado[k] = v; });
+  try { sessionStorage.setItem('utms', JSON.stringify(guardado)); } catch (e) {}
+  if (!Object.keys(guardado).length) return;
+  document.querySelectorAll('a[href*="herogateway.com"]').forEach(function (a) {
+    try { var u = new URL(a.href); Object.keys(guardado).forEach(function (k) { u.searchParams.set(k, guardado[k]); }); a.href = u.toString(); } catch (e) {}
+  });
+})();
+</script>
 </body>
 </html>
