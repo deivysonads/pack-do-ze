@@ -252,8 +252,9 @@ document.querySelectorAll('.aparece').forEach(el => io.observe(el));
 (function () {
   var chaves = /^(utm_[a-z_]+|src|sck|xcod|fbclid|gclid|ttclid|wbraid|gbraid|msclkid)$/i, guardado = {};
   try { guardado = JSON.parse(sessionStorage.getItem('utms') || '{}'); } catch (e) {}
-  new URLSearchParams(location.search).forEach(function (v, k) { if (chaves.test(k) && v) guardado[k] = v; });
-  try { sessionStorage.setItem('utms', JSON.stringify(guardado)); } catch (e) {}
+  var daUrl = {};
+  new URLSearchParams(location.search).forEach(function (v, k) { if (chaves.test(k) && v) daUrl[k] = v; });
+  if (Object.keys(daUrl).length) { guardado = daUrl; try { sessionStorage.setItem('utms', JSON.stringify(guardado)); } catch (e) {} }
   if (!Object.keys(guardado).length) return;
   document.querySelectorAll('a[href*="herogateway.com"]').forEach(function (a) {
     try { var u = new URL(a.href); Object.keys(guardado).forEach(function (k) { u.searchParams.set(k, guardado[k]); }); a.href = u.toString(); } catch (e) {}
