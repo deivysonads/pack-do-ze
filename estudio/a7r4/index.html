@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Guia do Estúdio</title>
+<style>
+@font-face{font-family:'Inter';src:url(../../fonts/inter-latin.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Inter';src:url(../../fonts/inter-latin-ext.woff2) format('woff2');font-weight:100 900;font-display:swap;unicode-range:U+0100-02BA,U+1E00-1EFF}
+:root{--tinta:#1B1B22;--papel:#F6F0E1;--amarelo:#FFD23F;--verde:#2FB36D;--azul:#3257F5;--cinza:#6B665B}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:var(--tinta);background:var(--papel);font-size:17px;line-height:1.5}
+.topo{background:#15151B;color:#fff;padding:28px 16px 34px}
+.cx{max-width:760px;margin:0 auto}
+.tag{display:inline-block;background:var(--amarelo);color:var(--tinta);font-weight:900;font-size:13px;letter-spacing:.12em;padding:4px 12px;border-radius:8px}
+h1{font-size:clamp(30px,7vw,46px);line-height:1.04;font-weight:900;margin:12px 0 8px;letter-spacing:-.02em}
+h1 b{color:var(--amarelo)}
+.topo p{margin:0 0 18px;font-size:18px;color:#D6D1C6}
+.video{border-radius:16px;overflow:hidden;border:3px solid var(--amarelo);background:#000;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.video video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.video small{display:block;background:var(--amarelo);color:var(--tinta);font-weight:800;font-size:14px;padding:7px 12px;text-align:center}
+main{padding:26px 16px 50px}
+h2{font-size:clamp(24px,5.4vw,30px);font-weight:900;margin:0 0 14px;letter-spacing:-.01em;line-height:1.1}
+h2 span{color:#8A6D00;font-size:13px;font-weight:800;letter-spacing:.12em;display:block;margin-bottom:4px}
+.sec{margin-top:40px}
+.btn{display:block;text-decoration:none;text-align:center;font-weight:900;font-size:18px;padding:14px;border-radius:14px;border:3px solid var(--tinta);box-shadow:5px 5px 0 var(--tinta);color:#fff;background:var(--verde)}
+.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--tinta)}
+.passos{position:relative}
+.passos:before{content:"";position:absolute;left:21px;top:22px;bottom:60px;width:4px;background:var(--tinta);border-radius:2px}
+.passo{position:relative;padding:0 0 26px 64px}
+.passo:last-child{padding-bottom:0}
+.n{position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;background:var(--amarelo);border:4px solid var(--tinta);font-weight:900;font-size:22px;display:flex;align-items:center;justify-content:center}
+.passo h3{margin:0 0 4px;font-size:22px;font-weight:900;line-height:46px}
+.passo p{margin:0 0 8px;color:#3B3A36}
+.obs{font-size:14.5px;color:var(--cinza);margin:6px 0 0}
+.fala{background:var(--tinta);color:#fff;border-radius:12px;padding:12px 12px 12px 14px;font-weight:700;font-size:16px;margin:8px 0;display:flex;gap:10px;align-items:flex-start}
+.fala i{font-style:normal;color:var(--amarelo);font-weight:900;flex:none}
+.fala span{flex:1;min-width:0}
+.fala button{flex:none;font:inherit;font-size:13px;font-weight:800;border:0;border-radius:8px;padding:6px 10px;background:var(--amarelo);color:var(--tinta);cursor:pointer}
+.fala button.ok{background:var(--verde);color:#fff}
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.card{background:#fff;border:3px solid var(--tinta);border-radius:14px;padding:13px 15px;font-size:15.5px;line-height:1.45}
+.card b.t{display:block;font-size:18px;margin-bottom:4px}
+.amarelo{background:#FFF3C4}.verde2{background:#DDF5E7}.azul{background:#E1EEFF}.rosa{background:#FFE1E3}
+.lista{margin:0;padding:0;list-style:none}
+.lista li{padding:9px 0 9px 28px;position:relative;border-bottom:1px dashed #CFC7B2}
+.lista li:last-child{border-bottom:0}
+.lista li:before{content:"→";position:absolute;left:4px;font-weight:900;color:#B8860B}
+a.url,.url{color:var(--azul);font-weight:700;word-break:break-word}
+footer{margin-top:44px;font-size:13.5px;color:#8a867d;text-align:center}
+footer a{color:var(--cinza);font-weight:700}
+</style>
+</head>
+<body>
+
+<header class="topo"><div class="cx">
+  <span class="tag">GUIA RÁPIDO</span>
+  <h1>Estúdio de Vídeos<br>Animados <b>com IA</b></h1>
+  <p>Assiste a aula e segue os 5 passos aqui embaixo.</p>
+  <div class="video">
+    <video controls playsinline preload="metadata" poster="aula-1-capa.jpg">
+      <source src="aula-1.mp4" type="video/mp4">
+      Teu navegador não tocou o vídeo. <a href="aula-1.mp4">Abre a aula por aqui.</a>
+    </video>
+    <small>▶ AULA 1 · Instalando o estúdio (2 minutos)</small>
+  </div>
+</div></header>
+
+<main><div class="cx">
+
+  <h2><span>PASSO A PASSO</span>Os 5 passos da aula</h2>
+  <div class="passos">
+    <div class="passo"><div class="n">1</div><h3>Baixa o estúdio</h3>
+      <a class="btn" href="Estudio-Videos-Animados-IA.zip">⬇ BAIXAR O ESTÚDIO (.zip, 8 MB)</a>
+      <p class="obs">Baixa no computador. O estúdio não roda no celular.</p>
+    </div>
+    <div class="passo"><div class="n">2</div><h3>Extrai o arquivo</h3>
+      <p>Dois cliques nele. No Windows: botão direito → <b>Extrair tudo</b>. Aparece a pasta <b>estudio-com-ia</b>.</p>
+      <p class="obs">Não precisa criar nem mover pasta nenhuma. Ela já vem pronta.</p>
+    </div>
+    <div class="passo"><div class="n">3</div><h3>Abre a pasta no Claude</h3>
+      <p>App do Claude (<a class="url" href="https://claude.com/download" target="_blank" rel="noopener">claude.com/download</a>) → aba <b>Code</b> → <b>Escolher pasta</b> → <b>estudio-com-ia</b>.</p>
+    </div>
+    <div class="passo"><div class="n">4</div><h3>Manda a primeira mensagem</h3>
+      <div class="fala"><i>›</i><span>Prepara tudo pra eu fazer meu primeiro vídeo.</span></div>
+      <p class="obs">O Claude instala o que falta e faz um vídeo de exemplo. Se o computador pedir senha, é tu que digita. Nunca manda senha no chat.</p>
+    </div>
+    <div class="passo"><div class="n">5</div><h3>Pede a tua primeira ideia</h3>
+      <div class="fala"><i>›</i><span>Me dá 10 ideias de vídeo pro meu nicho: [teu nicho].</span></div>
+      <div class="fala"><i>›</i><span>Faz a número 3.</span></div>
+      <p class="obs">Ele escreve o roteiro, faz a voz, anima e entrega o vídeo na pasta <b>out</b>.</p>
+    </div>
+  </div>
+
+  <section class="sec">
+    <h2><span>A VOZ</span>Escolhe um dos 3 jeitos</h2>
+    <div class="grade">
+      <div class="card amarelo"><b class="t">🔑 Chave grátis do Google</b>Entra em <a class="url" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a>, clica em <b>Create API key</b> e cola a chave no Claude.</div>
+      <div class="card azul"><b class="t">🎙️ VoiceStudio</b>Programa grátis de vozes que roda no teu computador. Instala, escolhe a voz e pede: <b>"usa a voz do VoiceStudio"</b>.<br><a class="url" href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener">github.com/debpalash/VoiceStudio</a></div>
+      <div class="card verde2"><b class="t">📱 A tua voz</b>Grava o roteiro no celular, manda o áudio pro Claude e ele anima em cima.</div>
+    </div>
+    <p class="obs">No VoiceStudio, cada voz tem a sua licença: confere se a que tu escolheu pode ser usada em vídeo que vende.</p>
+  </section>
+
+  <section class="sec">
+    <h2><span>COPIA E COLA</span>Pedidos prontos</h2>
+    <div class="fala"><i>🎭</i><span><b>Esquete (o do viral):</b> Faz um esquete de 45 segundos, formato "negócios que parecem besteira mas dão dinheiro", sobre [assunto]. Mostra a conta na tela, com os números marcados como exemplo.</span></div>
+    <div class="fala"><i>📓</i><span><b>Caderno:</b> Faz um Reel de caderno de 30 segundos explicando [assunto].</span></div>
+    <div class="fala"><i>🎓</i><span><b>Aula pro YouTube:</b> Faz uma aula de 2 minutos ensinando 3 passos pra [assunto].</span></div>
+    <div class="fala"><i>📣</i><span><b>Anúncio:</b> Faz um vídeo narrado de 25 segundos mostrando por que comprar o meu produto: [produto e preço].</span></div>
+    <div class="fala"><i>🔧</i><span><b>Ajuste:</b> A legenda tá rápida e o gancho tá fraco. Arruma e renderiza de novo.</span></div>
+    <div class="card rosa" style="margin-top:18px"><b class="t">💡 O truque do link</b>Viu um vídeo que bombou no YouTube ou no Instagram? Cola o link no Claude e pede:
+      <div class="fala"><i>›</i><span>Assiste esse vídeo e faz um nesse modelo, com o meu assunto.</span></div>
+      <span class="obs">Ele baixa, assiste, aprende o formato e faz o teu. Vale pra vídeo público.</span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2><span>DEPOIS DO VÍDEO PRONTO</span>Posta e transforma em resultado</h2>
+    <ul class="lista">
+      <li><b>Formato:</b> esquete, caderno e anúncio saem em pé (Reels, TikTok, Shorts). A aula sai deitada, pro YouTube.</li>
+      <li><b>Legenda do post:</b> pede "escreve a legenda do post com uma pergunta no fim".</li>
+      <li><b>Constância:</b> 1 vídeo por dia no mesmo formato rende mais que 7 diferentes de uma vez.</li>
+      <li><b>Gancho:</b> um fato surpreendente nos 3 primeiros segundos.</li>
+    </ul>
+    <div class="grade" style="margin-top:16px">
+      <div class="card verde2"><b class="t">📈 Crescer o perfil</b>Vídeo que ensina é compartilhado e leva o perfil pra gente nova.</div>
+      <div class="card amarelo"><b class="t">💰 Monetizar</b>TikTok, YouTube e Facebook pagam quem cumpre as regras de cada programa.</div>
+      <div class="card azul"><b class="t">🛒 Vender</b>No fim do vídeo, chama pro link da bio: um PDF, um curso, um serviço.</div>
+    </div>
+    <p class="obs">Sendo direto: o estúdio faz o vídeo, mas ninguém garante quantas views ele vai ter. Postar todo dia e repetir o formato que funcionou é o que aumenta a chance.</p>
+  </section>
+
+  <section class="sec">
+    <h2><span>TRAVOU?</span>Deu problema</h2>
+    <ul class="lista">
+      <li><b>Qualquer erro:</b> copia a mensagem, cola no Claude e pede "resolve isso".</li>
+      <li><b>A voz não saiu:</b> a cota grátis do dia acabou. Põe uma segunda chave ou usa o VoiceStudio.</li>
+      <li><b>O render travou:</b> fecha outros programas e pede pra renderizar de novo.</li>
+      <li><b>A pasta tem acento no caminho</b> (nome do usuário, por exemplo) e o vídeo não sai: pede pro Claude mover o estúdio pra um lugar simples.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <a href="Guia-Estudio-Videos-Animados-IA.pdf">Baixar este guia em PDF</a><br>
+    Estúdio de Vídeos Animados com IA · uso pessoal, não repasse os arquivos
+  </footer>
+</div></main>
+
+<script>
+// botão "copiar" em cada pedido pronto
+document.querySelectorAll('.fala').forEach(function (f) {
+  var s = f.querySelector('span'); if (!s || !navigator.clipboard) return;
+  var b = document.createElement('button'); b.type = 'button'; b.textContent = 'copiar';
+  b.addEventListener('click', function () {
+    var t = s.cloneNode(true), r = t.querySelector('b'); if (r) r.remove();
+    navigator.clipboard.writeText(t.textContent.trim()).then(function () { b.textContent = 'copiado ✓'; b.classList.add('ok'); setTimeout(function () { b.textContent = 'copiar'; b.classList.remove('ok'); }, 1600); });
+  });
+  f.appendChild(b);
+});
+</script>
+</body>
+</html>
