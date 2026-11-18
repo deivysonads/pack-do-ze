@@ -217,7 +217,7 @@ footer { text-align: center; color: var(--txt2); font-size: 13px; padding: 30px 
       <li>Aula em vídeo, do download à 1ª ideia</li>
       <li>Acesso na hora no teu e-mail</li>
     </ul>
-    <a class="botao grande" href="https://herogateway.com/c/BSZZPFE7?o=X4GC59TW">Quero o estúdio por R$ 47 →</a>
+    <a class="botao grande" href="https://herocheckout.com.br/c/BSZZPFE7?o=X4GC59TW">Quero o estúdio por R$ 47 →</a>
   </div>
 </div></section>
 
@@ -258,7 +258,7 @@ document.querySelectorAll('.aparece').forEach(el => io.observe(el));
   new URLSearchParams(location.search).forEach(function (v, k) { if (chaves.test(k) && v) daUrl[k] = v; });
   if (Object.keys(daUrl).length) { guardado = daUrl; try { sessionStorage.setItem('utms', JSON.stringify(guardado)); } catch (e) {} }
   if (!Object.keys(guardado).length) return;
-  document.querySelectorAll('a[href*="herogateway.com"]').forEach(function (a) {
+  document.querySelectorAll('a[href*="herocheckout.com.br"]').forEach(function (a) {
     try { var u = new URL(a.href); Object.keys(guardado).forEach(function (k) { u.searchParams.set(k, guardado[k]); }); a.href = u.toString(); } catch (e) {}
   });
 })();
